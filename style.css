@@ -3,16 +3,15 @@
 * {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 body {
-  margin: 0;
-  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d7e7ff;
+  background-color: #333;
 }
 
 /* !container */
@@ -39,7 +38,7 @@ body {
   align-items: center;
   transition: all 1s ease-in-out;
   backface-visibility: hidden;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgba(125, 125, 137, 0.2) 0px 7px 29px 0px;
   perspective: 800px;
 }
 
@@ -58,10 +57,8 @@ body {
 /* !flip-card-front */
 
 .flip-card-front {
-  background-color: whitesmoke;
-  color: gray;
   transform: rotateX(0deg);
-  background-image: linear-gradient(to left, #09009e, #315af6);
+  background-image: linear-gradient(to left, #000000, #707070);
 }
 .frontAbout {
   display: flex;
@@ -74,8 +71,7 @@ body {
 .frontAbout .frontVisaTitle {
   font-size: 40px;
   margin-top: 20px;
-  color: white;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
@@ -83,25 +79,22 @@ body {
   font-size: 30px;
   width: 100%;
   letter-spacing: 5px;
-  color: white;
   text-align: center;
   margin-top: 15px;
 }
 .frontAbout .frontVisaDate {
   margin-left: 175px;
   font-size: 15px;
-  font-weight: 400;
-  color: white;
+  font-weight: 600;
   letter-spacing: 4px;
 }
 .frontAbout .frontVisaIcon {
-  height: 50px;
-  width: 70px;
-  color: white;
+  height: 20px;
+  width: 60px;
 }
 .frontAbout .frontVisaPerson {
-  font-weight: 400;
-  color: white;
+  font-weight: bold;
+  font-size: 25px;
 }
 .frontAbout .frontFooter {
   width: 100%;
@@ -110,7 +103,15 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
+.frontFooter {
+  position: relative;
+}
+.frontFooter p {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 50%;
+}
 .frontVisaChip {
   margin-left: 30px;
   height: 50px;
@@ -126,10 +127,8 @@ body {
 /* !flip-card-back */
 
 .flip-card-back {
-  background-color: gray;
-  color: whitesmoke;
   transform: rotateX(180deg);
-  background-image: linear-gradient(to right, #09009e, #315af6);
+  background-image: linear-gradient(to right, #000000, #707070);
 }
 
 .backAbout {
@@ -148,13 +147,13 @@ body {
 }
 .backHeader .backVisaLorem {
   font-size: 10px;
-  padding: 12px 0;
+  padding: 12px 10px;
 }
 .backVisaNumber {
   letter-spacing: 5px;
-  color: rgb(238, 238, 238);
   font-size: 30px;
   margin: 10px auto;
+  color: rgba(255, 255, 255, 0.623) !important;
 }
 .backContainerWhite {
   position: relative;
@@ -176,7 +175,7 @@ body {
 .cvv {
   position: absolute;
   margin-left: 10px;
-  color: rgb(189, 189, 189);
+  color: rgb(189, 189, 189) !important;
   font-weight: 500;
 }
 
@@ -209,7 +208,6 @@ body {
   margin-right: 20px;
 }
 .backVisaIcon {
-  height: 50px;
-  width: 70px;
-  color: white;
+  height: 20px;
+  width: 60px;
 }
